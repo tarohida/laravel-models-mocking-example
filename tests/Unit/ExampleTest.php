@@ -25,7 +25,7 @@ class ExampleTest extends TestCase
     $mock->shouldReceive('method_do_not_exists')
         ->once()->andReturn('mocked_value');
 
-    echo "---- \$mock の中身を出力 ----\n";
+    echo "\n---- \$mock の中身を出力 ----\n";
     var_dump($mock);
     echo "-------------------------------";
 
