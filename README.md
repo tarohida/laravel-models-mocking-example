@@ -25,6 +25,120 @@ composer install
 vendor/bin/phpunit tests/Unit/ExampleTest.php
 ```
 
+you will get successfull output!
+
+```
+$ vendor/bin/phpunit tests/Unit/ExampleTest.php 
+PHPUnit 9.4.1 by Sebastian Bergmann and contributors.
+
+.                                                                   1 / 1 (100%)
+---- $mock の中身を出力 ----
+/home/vagrant/blog/laravel-models-mocking-example/tests/Unit/ExampleTest.php:29:
+class App\Models\ExampleModel#419 (20) {
+  protected $_mockery_expectations =>
+  array(1) {
+    'method_do_not_exists' =>
+    class Mockery\ExpectationDirector#418 (5) {
+      protected $_name =>
+      string(20) "method_do_not_exists"
+      protected $_mock =>
+              ...
+
+      protected $_expectations =>
+      array(1) {
+        ...
+      }
+      protected $_expectedOrder =>
+      NULL
+      protected $_defaults =>
+      array(0) {
+        ...
+      }
+    }
+  }
+  protected $_mockery_expectations_count =>
+  int(0)
+  protected $_mockery_ignoreMissing =>
+  bool(false)
+  protected $_mockery_deferMissing =>
+  bool(false)
+  protected $_mockery_verified =>
+  bool(false)
+  protected $_mockery_name =>
+  NULL
+  protected $_mockery_allocatedOrder =>
+  int(0)
+  protected $_mockery_currentOrder =>
+  int(0)
+  protected $_mockery_groups =>
+  array(0) {
+  }
+  protected $_mockery_container =>
+  class Mockery\Container#391 (7) {
+    protected $_mocks =>
+    array(1) {
+      'App\Models\ExampleModel' =>
+              ...
+
+    }
+    protected $_allocatedOrder =>
+    int(0)
+    protected $_currentOrder =>
+    int(0)
+    protected $_groups =>
+    array(0) {
+    }
+    protected $_generator =>
+    class Mockery\Generator\CachingGenerator#392 (2) {
+      protected $generator =>
+      class Mockery\Generator\StringManipulationGenerator#393 (1) {
+        ...
+      }
+      protected $cache =>
+      array(1) {
+        ...
+      }
+    }
+    protected $_loader =>
+    class Mockery\Loader\EvalLoader#407 (0) {
+    }
+    protected $_namedMocks =>
+    array(1) {
+      'App\Models\ExampleModel' =>
+      string(32) "95c5da8bb7bddd34eca21eca8f6393f1"
+    }
+  }
+  protected $_mockery_partial =>
+  NULL
+  protected $_mockery_disableExpectationMatching =>
+  bool(false)
+  protected $_mockery_mockableProperties =>
+  array(0) {
+  }
+  protected $_mockery_mockableMethods =>
+  array(0) {
+  }
+  protected $_mockery_allowMockingProtectedMethods =>
+  bool(false)
+  protected $_mockery_receivedMethodCalls =>
+  NULL
+  protected $_mockery_defaultReturnValue =>
+  NULL
+  protected $_mockery_thrownExceptions =>
+  array(0) {
+  }
+  protected $_mockery_instanceMock =>
+  bool(true)
+  protected $_mockery_ignoreVerification =>
+  bool(true)
+}
+-------------------------------
+
+Time: 00:00.096, Memory: 20.00 MB
+
+OK (1 test, 2 assertions)
+```
+
 ## how it was made
 
 ```
