@@ -1,7 +1,26 @@
+## Enviroment
+
+```
+$ php --version
+PHP 7.4.5 (cli) (built: Apr 19 2020 07:36:30) ( NTS )
+```
+
+```
+$ composer info laravel/framework
+name     : laravel/framework
+descrip. : The Laravel Framework.
+keywords : framework, laravel
+versions : * v8.10.0
+```
+
+Homestead: v10.12.0
+OS: Ubuntu18.04 LTS
+
 ## how to use
 
 ```
 git clone https://github.com/tarohida/laravel-models-mocking-example.git
+cd laravel-models-mocking-example/
 composer install
 vendor/bin/phpunit tests/Unit/ExampleTest.php
 ```
